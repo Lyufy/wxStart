@@ -1,4 +1,4 @@
-﻿var express = require('express');
+var express = require('express');
 var router = express.Router();
 var userModel = require('../db/User/User');
 var sha1 = require('sha1');
@@ -36,6 +36,9 @@ router.get('/reg',function(req,res){
     res.send('注册成功');
   })
   res.send('33333');
+});
+router.get('/qiyan',function(req,res){
+  res.send('戚燕小可爱');
 });
 router.get('/jsapi',async function(req,res){
   let url = decodeURIComponent(req.query.url);
