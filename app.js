@@ -18,8 +18,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'dist')));
+// app.use(express.static(path.join(__dirname, 'dist')));
 
-app.use('/', indexRouter);
+app.use('/wx', indexRouter);
 app.use('/users', usersRouter);
 app.use('/liuhui',liuhuiRouter);
 app.use('/yituo',yituoRouter);
